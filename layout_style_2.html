@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html >
+<head>
+
+	<title>HTML5 boilerplate</title>
+	<style type="text/css" media="screen">@import url('reset.css');</style>
+	<link href='http://fonts.googleapis.com/css?family=Arvo' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=PT+Sans' rel='stylesheet' type='text/css'>
+	<script type="text/javascript" src="jquery-1.5.min.js"></script>
+	<script src="jmetadata/jquery.metadata.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.sizes.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jlayout.border.js" type="text/javascript" charset="utf-8"></script>
+	<script src="jquery.jlayout.js" type="text/javascript" charset="utf-8"></script>
+	<script type="text/javascript" src="jquery.ba-equalizebottoms.js"></script>
+	<script type="text/javascript" src="jquery.masonry.min.js"></script>
+	<script type="text/javascript" src="jquery.jWidths_v2.js"></script>
+	<script type="text/javascript" src="jquery.fullscreenr.js"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+			var FullscreenrOptions = {  width: 1920, height: 1200, bgID: '#bgimg' };
+			jQuery.fn.fullscreenr(FullscreenrOptions);
+			jQuery.fn.jwwrapper = function(col,mar,bor,sel){
+				$(this).jWidths({
+					'def_columns':col,
+					'def_margin':mar,
+					'def_border': bor,
+					'ItemSelector': sel
+				});
+			} // End of jwwrapper
+				$('.content_2').jwwrapper('2','10','0','div');
+				$('.nav').jwwrapper('5','5','0','.navitem');
+				$('.content_1').jwwrapper('3','3','0','.cont_1');
+			$(window).resize(function(){
+				$('.content_2').jwwrapper('2','10','0','div');
+				$('.nav').jwwrapper('5','5','0','.navitem');
+				$('.content_1').jwwrapper('3','3','0','.cont_1');
+			});
+		});
+	</script>
+	<style>
+	body {
+		overflow:hidden; 
+		padding:0;margin:0;
+		height:100%;width:100%;
+	}
+	#bgimg {
+		position:absolute;
+		z-index: -1;
+	}
+	#realBody{
+		position:absolute;
+		z-index: 5;	
+		overflow:auto; 
+		height:100%;width:100%;
+		background:rgba(10,10,10,.7);
+		color:#ddd; 
+	}
+	.header {
+		width:100% ;
+		margin-top:10px; 
+		margin-bottom:10px;
+		float:left ; 
+		clear: both;
+		background:rgba(10,10,10,.7);
+	}
+	.nav {
+		width: 80%;
+		margin:0 auto;
+	}
+	.navitem {
+		clear: none;
+		float:left; 
+		text-align:center; 
+		font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		background:rgba(103,103,103,.3);
+		padding: 5px 0px;
+	}
+	.footer {
+		width:100% ;
+		margin-top:50px; 
+		margin-bottom:0px;  
+		float:left ; 
+		clear: both;
+		background:rgba(10,10,10,.7);
+	}
+	h1 {
+		font-family: 'Arvo', Georgia, Times, serif;
+		font-size: 59px;
+		line-height: 70px;
+		text-shadow: 1px 1px 1px #aaa;
+	}
+	p {
+		font-family: 'PT Sans', Helvetica, Arial, sans-serif;
+		font-size: 16px;
+		line-height: 25px;
+		padding:10px; 
+	}
+	.top_bar {
+		width:95%;
+		clear: both;
+		margin:0 auto;  
+	}
+	.title{
+		clear: none;
+		float:left; 
+		margin-top:5px;
+	}
+	.logon {
+		clear: none;
+		float: right; 
+		margin-top:20px;
+		margin-right:10px;
+		padding:5px;
+		letter-spacing: 0.1em;
+		background:rgba(0,0,0,.15) ;
+		_border: 1px solid #000;   
+	}
+	.title .title_info {
+		padding-left:55px;
+		font-weight:bold;  
+		clear: both;
+		margin-top:-10px; 
+		letter-spacing:0.3em;
+		color:#ccc;
+	}
+	.content_main {
+		width:95%;
+		margin:auto;
+	}
+	.content_1 {
+		width:100%; 
+		margin: 10px auto; 
+		clear: both;
+		float:left; 
+
+		background:rgba(0,0,0,.15) ;
+		_border: 1px solid #000;
+	}
+	.cont_1 {
+		clear: none;
+		float:left ; 
+	}
+	.content_2 {
+		width:100%;
+		margin: 10px auto; 
+		clear: both;
+		float:left; 
+		_background:rgba(0,0,0,.15) ;
+		_border: 1px solid #000;
+	}
+	.cont_21,.cont_22 {
+		clear:none;
+		float:left ; 
+		background:rgba(0,0,0,.15) ; 
+	}
+	</style>
+</head>
+<body>
+	<img id="bgimg" src="wallpaper_2.jpg" width="1920" height="1200" alt="testing" /> 
+	<div id="realBody">
+		
+		<div class="top_bar">
+			<div class="title">
+				<h1>LoremIpsum</h1><div class="title_info">Lorem eh ipsum</div>
+			</div>
+			<div class="logon">
+				<h2>SignIn | SignUp</h2>
+			</div>
+		</div>
+		<div class="header">
+			<div class="nav">
+				<div class="navitem">Nav #1</div>
+				<div class="navitem"> 	 Nav #2</div>
+				<div class="navitem"> 	 Nav #3 	 </div>
+				<div class="navitem"> 	 Nav #4 	 </div>
+				<div class="navitem"> 	 Nav #5 	 </div>
+			</div>
+		</div>
+		<div class="content_main">
+			<div class="content_1">
+				<div class="cont_1">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. Proin risus nibh, consectetuer cursus, lobortis vitae, ullamcorper pretium, tellus. Duis sodales, tortor a laoreet venenatis, nibh quam fringilla diam, nec suscipit tellus mi ac dolor. Praesent sed risus. Morbi mollis eleifend risus. Curabitur nec erat at nulla hendrerit malesuada. Suspendisse vitae lacus. Phasellus ligula ligula, gravida non, pellentesque ut, molestie nec, diam. Integer tempus, sapien vitae bibendum faucibus, mauris magna venenatis odio, ac aliquam orci eros sit amet mi. Fusce lobortis dui sit amet est. Donec fringilla felis at nisi. Cras pulvinar metus nec quam. Aenean non urna. </p>
+				</div>
+				<div class="cont_1">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. Proin risus nibh, consectetuer cursus, lobortis vitae, ullamcorper pretium, tellus. Duis sodales, tortor a laoreet venenatis, nibh quam fringilla diam, nec suscipit tellus mi ac dolor. Praesent sed risus. Morbi mollis eleifend risus. Curabitur nec erat at nulla hendrerit malesuada. Suspendisse vitae lacus. Phasellus ligula ligula, gravida non, pellentesque ut, molestie nec, diam. Integer tempus, sapien vitae bibendum faucibus, mauris magna venenatis odio, ac aliquam orci eros sit amet mi. Fusce lobortis dui sit amet est. Donec fringilla felis at nisi. Cras pulvinar metus nec quam. Aenean non urna. </p>
+				</div>
+				<div class="cont_1">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. Proin risus nibh, consectetuer cursus, lobortis vitae, ullamcorper pretium, tellus. Duis sodales, tortor a laoreet venenatis, nibh quam fringilla diam, nec suscipit tellus mi ac dolor. Praesent sed risus. Morbi mollis eleifend risus. Curabitur nec erat at nulla hendrerit malesuada. Suspendisse vitae lacus. Phasellus ligula ligula, gravida non, pellentesque ut, molestie nec, diam. Integer tempus, sapien vitae bibendum faucibus, mauris magna venenatis odio, ac aliquam orci eros sit amet mi. Fusce lobortis dui sit amet est. Donec fringilla felis at nisi. Cras pulvinar metus nec quam. Aenean non urna. </p>
+				</div>
+			</div>
+			<div class="content_2">
+				<div class="cont_21">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. loreml	</p>
+				</div>
+				<div class="cont_22">
+					<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. loreml	</p>
+				</div>
+			</div>
+		</div>
+		<div class="footer">
+			<p>Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Donec leo arcu, iaculis at, ultricies et, porta eget, urna. Nulla facilisi. Praesent ac risus at nulla fermentum condimentum. Integer odio massa, vulputate id, suscipit non, mattis sed, nibh. Suspendisse sollicitudin egestas nunc. Proin non risus. </p>
+		</div>
+	</div>
+
+</body>
+</html>
